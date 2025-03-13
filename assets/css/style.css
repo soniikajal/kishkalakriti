@@ -503,6 +503,10 @@
       margin-top: 10px;
       align-items: center;
     }
+
+    .social{
+      flex-direction: row;
+    }
     
     .nav-ops a {
       margin: 5px 0;
