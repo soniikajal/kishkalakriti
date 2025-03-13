@@ -1164,3 +1164,85 @@
     font-size: 1.2rem;
   }
 }
+
+
+/* Privacy Policy Page Styles */
+.blah {
+  padding: 2rem 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blah h1 {
+  font-family: "Londrina Shadow", serif;
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #14222D;
+}
+
+.blah h2 {
+  font-family: "Twinkle Star", serif;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #14222D;
+}
+
+.blah p {
+  font-family: "Indie Flower", serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Responsive styles for privacy policy page */
+@media (max-width: 992px) {
+  .blah {
+    padding: 2rem 3rem;
+  }
+  
+  .blah h1 {
+    font-size: 4rem;
+  }
+  
+  .blah h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .blah {
+    padding: 1.5rem 2rem;
+  }
+  
+  .blah h1 {
+    font-size: 3.5rem;
+  }
+  
+  .blah h2 {
+    font-size: 2rem;
+  }
+  
+  .blah p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .blah {
+    padding: 1rem 1.5rem;
+  }
+  
+  .blah h1 {
+    font-size: 3rem;
+  }
+  
+  .blah h2 {
+    font-size: 1.8rem;
+  }
+  
+  .blah p {
+    font-size: 1rem;
+  }
+}
