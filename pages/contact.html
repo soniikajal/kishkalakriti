@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kish Kalakriti - Handcrafted Creations</title>
+    <title>Contact Us - Kish Kalakriti</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Bangers&family=Indie+Flower&family=Kranky&family=Lavishly+Yours&family=Londrina+Shadow&family=Rouge+Script&family=Twinkle+Star&family=Birthstone&display=swap" rel="stylesheet">
 </head>
-<body>
+<body bgcolor="#fef6d4">
     <header>
         <nav class="navbar">
             <div class="nav-logo">
                 <div class="logo"></div>
             </div>
             <div class="nav-ops">
-                <a href="index.html" class="active">Home</a>
-                <a href="/pages/shop.html">Shop</a>
-                <a href="/pages/about.html">About</a>
-                <a href="/pages/contact.html">Contact</a>
+                <a href="/index.html" class="active">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
             </div>
             <div class="social">
                 <a href="https://instagram.com/kish.kalakriti"><i class="fab fa-instagram"></i></a>
@@ -27,75 +27,48 @@
         </nav>
     </header>
 
-    <section class="hero-sec">
-        <button class="shop-now">
-            <a href="shop.html">Shop Now</a>
-        </button>
-    </section>
-
-    <section class="features">
-        <div class="welcome">
-            <h1>Welcome to<br>Kish Kalakriti !</h1>
-        </div>
-        <div class="details">
-            <p>We bring your ideas to life with handcrafted gifts, home decor, jewelry, and sustainable creations. Each product is made with love and attention to detail, ensuring it's as unique as you are.</p>
-            <a href="shop.html" class="btn">Learn More</a>
-        </div>
-    </section>
-
-    <section class="new-arrivals">
-        <div class="new">
-            <h1>NEW ARRIVALS</h1>
-        </div>
-        <div class="new-s">
-            <button>
-                <a href="shop.html">Shop Now</a>
-            </button>
+    <section class="contact-us">
+        <hr>
+        <h1>Contact Us</h1>
+        <hr>
+        <div class="contactcont">
+            <div class="online">
+                <h2>Online enquiry</h2>
+                <form id="contact-form" action="https://formspree.io/f/xwplkjow" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="det">
+                <h2>Contact details</h2>
+                <p><i class="fas fa-envelope"></i> kish.kalakritii@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +91 7827044075</p>
+                <div class="social-contact">
+                    
+                    <a href="https://instagram.com/kish.kalakriti"><i class="fab fa-instagram"></i></a>
+                    
+                </div>
+            </div>
         </div>
     </section>
 
     <!--<section id="newsletter">
         <div class="news">
             <div class="newstext">
-                <h2>Sign up for Newsletter</h2>
-                <p>Get e-mail updates about our latest launch and special offers.</p>
-            </div>
-            <div class="form">
-                <input type="text" placeholder="Your email address">
-                <button>Sign Up</button>
-            </div>
-            <div class="form">
-                <form id="newsletter-form">
-                    <input type="email" name="email" placeholder="Your email address" required>
-                    <button type="submit">Sign Up</button>
-                </form>
-            </div>
-            
-        </div>
-    </section>-->
-
-    <section id="newsletter">
-        <div class="news">
-            <div class="newstext">
                 <h2>Sign Up For Newsletters</h2>
                 <p>Get e-mail updates about our latest launch and special offers.</p>
             </div>
             <div class="form">
-                <form id="newsletter-form">
+                <form id="newsletter-form" target="hidden-iframe">
                     <input type="email" name="emailAddress" placeholder="Your email address" required>
                     <button type="submit">Sign Up</button>
                 </form>
+                <iframe name="hidden-iframe" id="hidden-iframe" style="display:none"></iframe>
             </div>
         </div>
-    </section>
-    
-    
-    
-    
-    
-    
-    
-    
+    </section>-->
 
     <footer>
         <div class="foot">

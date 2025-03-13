@@ -207,7 +207,7 @@
   .new-s a {
     color: #FEF6D4;
     transition: 0.3s ease;
-    border: 1px solid #ce876e;
+    border: 1px solid transparent;
     text-decoration: none;
     padding: 2px 10px;
   }
@@ -633,3 +633,509 @@
   }
   }
   
+
+  /* about page */
+  /* About Page Specific Styles 
+.hero-abt {
+  background-image: url(../images/about/abtbanner1.png);
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.abt-txt pre {
+  font-size: 6rem;
+  font-family: "Lavishly Yours", serif;
+  font-style: italic;
+  color: whitesmoke;
+  margin-bottom: 6.8rem;
+  text-align: center;
+}
+
+.about-us,
+.creator {
+  padding: 0 5rem;
+}
+
+.about-us h1,
+.creator h1 {
+  font-family: "Kranky", serif;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.about-us h2,
+.creator h2 {
+  font-family: "Twinkle Star", serif;
+  font-size: 3rem;
+  padding: 2px 1rem;
+}
+
+.about-us p,
+.about-us pre,
+.about-us a,
+.creator p,
+.creator a {
+  font-family: "Indie Flower", serif;
+  font-size: 26px;
+}
+
+.photo-box {
+  height: auto;
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+.photo {
+  background-image: url(../images/about/me.JPG);
+  height: 0;
+  padding-bottom: 116.67%;
+  width: 100%;
+  background-size: cover;
+  border: 5px solid #14222D;
+}
+
+.cont {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: justify;
+  align-items: center;
+}
+
+.abtbanner2 {
+  background-image: url(../images/about/abtbanner2.png);
+  background-size: cover;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* Add these media query updates for About page 
+@media (max-width: 992px) {
+  .hero-abt {
+    background-position: center;
+  }
+  
+  .abt-txt pre {
+    font-size: 5rem;
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .about-us h1,
+  .creator h1 {
+    font-size: 4rem;
+  }
+  
+  .about-us,
+  .creator {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-abt {
+    height: 350px;
+  }
+  
+  .abt-txt pre {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+  }
+  
+  .about-us h1,
+  .creator h1 {
+    font-size: 3.5rem;
+  }
+  
+  .about-us p,
+  .about-us pre,
+  .about-us a,
+  .creator p,
+  .creator a {
+    font-size: 22px;
+  }
+  
+  .cont {
+    flex-direction: column;
+  }
+  
+  .photo-box, .photo {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-abt {
+    height: 300px;
+  }
+  
+  .abt-txt pre {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .about-us h1,
+  .creator h1 {
+    font-size: 2.8rem;
+  }
+  
+  .about-us h2,
+  .creator h2 {
+    font-size: 2.2rem;
+  }
+  
+  .about-us p,
+  .about-us pre,
+  .about-us a,
+  .creator p,
+  .creator a {
+    font-size: 18px;
+  }
+  
+  .about-us,
+  .creator {
+    padding: 0 1.5rem;
+  }
+}
+  */
+
+  /* About Page Specific Styles */
+.hero-abt {
+  background-image: url(../images/about/abtbanner1.png);
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.abt-txt p {
+  font-size: 6rem;
+  font-family: "Lavishly Yours", serif;
+  font-style: italic;
+  color: whitesmoke;
+  margin-bottom: 6.8rem;
+  text-align: center;
+  margin-left: 12rem;
+}
+
+.about-us,
+.creator {
+  padding: 0 5rem;
+}
+
+.about-us h1,
+.creator h1 {
+  font-family: "Kranky", serif;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.about-us h2,
+.creator h2 {
+  font-family: "Twinkle Star", serif;
+  font-size: 3rem;
+  padding: 2px 1rem;
+}
+
+.about-us p,
+.about-us pre,
+.about-us a,
+.creator p,
+.creator a {
+  font-family: "Indie Flower", serif;
+  font-size: 26px;
+}
+
+.photo-box {
+  height: auto;
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+.photo {
+  background-image: url(../images/about/me.JPG);
+  height: 0;
+  padding-bottom: 116.67%;
+  width: 100%;
+  background-size: cover;
+  border: 5px solid #14222D;
+}
+
+.cont {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: justify;
+  align-items: center;
+}
+
+.abtbanner2 {
+  background-image: url(../images/about/abtbanner2.png);
+  background-size: cover;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* Add these media query updates for About page */
+@media (max-width: 992px) {
+  .hero-abt {
+    background-position: center;
+  }
+  
+  .abt-txt p {
+    font-size: 5rem;
+    margin-left: 5rem;
+    text-align: center;
+  }
+  
+  .about-us h1,
+  .creator h1 {
+    font-size: 4rem;
+  }
+  
+  .about-us,
+  .creator {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-abt {
+    height: 350px;
+  }
+  
+  .abt-txt pre {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+  }
+  
+  .about-us h1,
+  .creator h1 {
+    font-size: 3.5rem;
+  }
+  
+  .about-us p,
+  .about-us pre,
+  .about-us a,
+  .creator p,
+  .creator a {
+    font-size: 22px;
+  }
+  
+  .cont {
+    flex-direction: column;
+  }
+  
+  .photo-box, .photo {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-abt {
+    height: 300px;
+  }
+  
+  .abt-txt p {
+    font-size: 3rem;
+    margin-bottom: 7rem;
+    margin-left: 0;
+  }
+  
+  .about-us h1,
+  .creator h1 {
+    font-size: 2.8rem;
+  }
+  
+  .about-us h2,
+  .creator h2 {
+    font-size: 2.2rem;
+  }
+  
+  .about-us p,
+  .about-us pre,
+  .about-us a,
+  .creator p,
+  .creator a {
+    font-size: 18px;
+  }
+  
+  .about-us,
+  .creator {
+    padding: 0 1.5rem;
+  }
+}
+
+
+/* Contact Page Styles */
+.contact-us {
+  padding: 2rem 3rem 1rem 3rem;
+}
+
+.contact-us h1 {
+  font-size: 7rem;
+  text-align: center;
+  font-family: "Londrina Shadow", serif;
+}
+
+.contactcont {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.contactcont h2 {
+  font-family: "Lavishly Yours", serif;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.online,
+.det {
+  padding: 2rem;
+  text-align: center;
+  background-color: #FEF6D4;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  max-width: 500px;
+}
+
+.online input,
+.online textarea {
+  height: 3.125rem;
+  padding: 0 1rem;
+  font-size: 16px;
+  width: 100%;
+  border: 2px solid #14222D;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+.online textarea {
+  height: 150px;
+  padding: 1rem;
+  resize: none;
+  font-family: Arial, sans-serif;
+}
+
+.online button {
+  width: 120px;
+  height: 45px;
+  background-color: #14222D;
+  color: #FEF6D4;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.online button:hover {
+  background: #1d3242;
+  color: #fcf8e5;
+  border: 1px solid #0F1A23;
+}
+
+.det p {
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.det p i {
+  margin-right: 10px;
+  color: #14222D;
+}
+
+.social-contact {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-contact a {
+  color: #14222D;
+  font-size: 2rem;
+  transition: 0.3s ease;
+}
+
+.social-contact a:hover {
+  color: #1d3242;
+}
+
+/* Responsive styles for contact page */
+@media (max-width: 992px) {
+  .contact-us h1 {
+    font-size: 5rem;
+  }
+  
+  .contactcont h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-us {
+    padding: 1.5rem;
+  }
+  
+  .contact-us h1 {
+    font-size: 4rem;
+  }
+  
+  .contactcont {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .online, .det {
+    width: 90%;
+    max-width: none;
+  }
+  
+  .contactcont h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-us h1 {
+    font-size: 3rem;
+  }
+  
+  .contactcont h2 {
+    font-size: 2rem;
+  }
+  
+  .online, .det {
+    padding: 1.5rem;
+    width: 100%;
+  }
+  
+  .det p {
+    font-size: 1.2rem;
+  }
+}
