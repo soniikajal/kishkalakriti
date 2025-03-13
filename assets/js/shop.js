@@ -148,6 +148,58 @@ document.addEventListener('DOMContentLoaded', function() {
         renderProducts();
     }
 
+    function updateActiveCategoryOnScroll() {
+        // Only on desktop view
+        if (window.innerWidth <= 768) return;
+        
+        // Get all shop sections
+        const sections = document.querySelectorAll('.shop-section.desktop-view');
+        
+        // Find which section is most visible in the viewport
+        let currentInView = '';
+        let maxVisibility = 0;
+        
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            
+            // Calculate how much of the section is visible
+            const visibleHeight = Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
+            const visibility = visibleHeight > 0 ? visibleHeight / section.offsetHeight : 0;
+            
+            // If this section has more visibility than previous maximum, it becomes the current one
+            if (visibility > maxVisibility) {
+                maxVisibility = visibility;
+                currentInView = section.id;
+            }
+        });
+        
+        // Update active class if a section is in view
+        if (currentInView) {
+            categoryLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.dataset.category === currentInView) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    }
+
+    // Initial render
+    renderProducts();
+    
+    // Add scroll event listener
+    window.addEventListener('scroll', updateActiveCategoryOnScroll);
+    
+    // Update on resize too
+    window.addEventListener('resize', function() {
+        renderProducts();
+        updateActiveCategoryOnScroll();
+    });
+    
+    // Check active section on initial load
+    updateActiveCategoryOnScroll();
+
     // Handle category link clicks
     categoryLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -231,3 +283,6 @@ document.addEventListener('DOMContentLoaded', function() {
         renderProducts();
     });
 });
+
+
+
