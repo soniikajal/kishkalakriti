@@ -893,6 +893,18 @@
   .hero-abt {
     background-position: center;
   }
+
+  .abt-txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Make sure the container has height */
+  }
+  
+  .abt-txt p {
+    font-size: 3rem;
+    margin: 0; /* Remove default margins */
+  }
   
   .abt-txt p {
     font-size: 5rem;
@@ -915,10 +927,17 @@
   .hero-abt {
     height: 350px;
   }
+
+  .abt-txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Make sure the container has height */
+  }
   
-  .abt-txt pre {
-    font-size: 4rem;
-    margin-bottom: 4rem;
+  .abt-txt p {
+    font-size: 3rem;
+    margin: 0; /* Remove default margins */
   }
   
   .about-us h1,
@@ -949,11 +968,17 @@
   .hero-abt {
     height: 300px;
   }
+
+  .abt-txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Make sure the container has height */
+  }
   
   .abt-txt p {
     font-size: 3rem;
-    margin-bottom: 7rem;
-    margin-left: 0;
+    margin: 0; /* Remove default margins */
   }
   
   .about-us h1,

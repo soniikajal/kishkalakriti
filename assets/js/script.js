@@ -90,49 +90,96 @@ document.addEventListener('DOMContentLoaded', function() {
     // Call the compatibility check
     checkBrowserCompatibility();
     
-    // Newsletter form handling
-    const newsletterForm = document.getElementById('newsletter-form');
+    // Handle all forms - both Google Forms and Formspree
+    const forms = document.querySelectorAll('form');
     
-    if (newsletterForm) {
-        // Handle form submission
-        newsletterForm.addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent default form submission
-            
-            // Get the email value
-            const email = newsletterForm.querySelector('input[type="email"]').value;
-            
-            // Google Form submission URL - Replace with your actual form ID
-            const formId = '1FAIpQLSd3j9bJBYiY0qSpcBaje5ldT2xm76WDi9WsoZTJlyva2qDcUw';
-            const formUrl = `https://docs.google.com/forms/d/e/${formId}/formResponse`;
-            
-            // Create form data with the correct entry ID
-            // entry.2108832233 is your Google Form's field ID
-            const formData = new FormData();
-            formData.append('entry.2108832233', email);
-            
-            // Use a hidden iframe to submit the form (to avoid CORS issues)
-            const iframe = document.createElement('iframe');
-            iframe.style.display = 'none';
-            document.body.appendChild(iframe);
-            
-            // Create a form within the iframe and submit it
-            iframe.contentDocument.write(`
-                <form id="hidden-form" action="${formUrl}" method="POST">
-                    <input name="entry.2108832233" value="${email}">
-                </form>
-                <script>document.getElementById('hidden-form').submit();</script>
-            `);
-            
-            // Clear the input field
-            newsletterForm.querySelector('input[type="email"]').value = '';
-            
-            // Show success message
-            alert('Thank you for subscribing to our newsletter!');
-            
-            // Remove the iframe after submission (optional, can be delayed)
-            setTimeout(() => {
-                document.body.removeChild(iframe);
-            }, 1000);
-        });
-    }
+    forms.forEach(form => {
+        if (form.action) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); // Prevent default form submission
+                
+                // Check if the form is a Formspree form
+                if (form.action.includes('formspree.io')) {
+                    // Handle Formspree submission
+                    const formData = new FormData(form);
+                    
+                    fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            // Clear the form
+                            form.reset();
+                            // Show success message
+                            alert('Thank you for your submission!');
+                        } else {
+                            throw new Error('Form submission failed');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('There was a problem submitting your form. Please try again.');
+                    });
+                } 
+                // Check if the form is a Google Form
+                else if (form.action.includes('docs.google.com/forms') || form.id === 'newsletter-form') {
+                    // Handle Google Forms - need to identify the email input and entry ID
+                    const emailInput = form.querySelector('input[type="email"]');
+                    
+                    if (emailInput) {
+                        const email = emailInput.value;
+                        
+                        // Extract form ID from the action URL or use default
+                        let formId = '1FAIpQLSd3j9bJBYiY0qSpcBaje5ldT2xm76WDi9WsoZTJlyva2qDcUw';
+                        const actionMatch = form.action.match(/\/e\/([^\/]+)/);
+                        if (actionMatch && actionMatch[1]) {
+                            formId = actionMatch[1];
+                        }
+                        
+                        // Use entry ID from the input name or default
+                        let entryId = 'entry.2108832233';
+                        if (emailInput.name && emailInput.name.startsWith('entry.')) {
+                            entryId = emailInput.name;
+                        }
+                        
+                        const formUrl = `https://docs.google.com/forms/d/e/${formId}/formResponse`;
+                        
+                        // Use a hidden iframe to submit the form (to avoid CORS issues)
+                        const iframe = document.createElement('iframe');
+                        iframe.style.display = 'none';
+                        document.body.appendChild(iframe);
+                        
+                        // Create a form within the iframe and submit it
+                        iframe.contentDocument.write(`
+                            <form id="hidden-form" action="${formUrl}" method="POST">
+                                <input name="${entryId}" value="${email}">
+                            </form>
+                            <script>document.getElementById('hidden-form').submit();</script>
+                        `);
+                        
+                        // Clear the input field
+                        emailInput.value = '';
+                        
+                        // Show success message
+                        alert('Thank you for subscribing to our newsletter!');
+                        
+                        // Remove the iframe after submission
+                        setTimeout(() => {
+                            document.body.removeChild(iframe);
+                        }, 1000);
+                    } else {
+                        // Try standard form submission if no email input found
+                        form.submit();
+                    }
+                } else {
+                    // For any other form type, just submit normally
+                    form.submit();
+                }
+            });
+        }
+    });
 });
