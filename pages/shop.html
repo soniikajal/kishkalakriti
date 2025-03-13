@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kish Kalakriti - Shop</title>
+    <title>Shop - Kish Kalakriti</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/shopstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Bangers&family=Indie+Flower&family=Kranky&family=Lavishly+Yours&family=Londrina+Shadow&family=Rouge+Script&family=Twinkle+Star&family=Birthstone&display=swap" rel="stylesheet">
 </head>
-<body>
+<body bgcolor="#14222d">
     <header>
         <nav class="navbar">
             <div class="nav-logo">
@@ -16,9 +17,9 @@
             </div>
             <div class="nav-ops">
                 <a href="/index.html">Home</a>
-                <a href="/pages/shop.html" class="active">Shop</a>
-                <a href="/pages/about.html">About</a>
-                <a href="/pages/contact.html">Contact</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html" class="active">About</a>
+                <a href="contact.html">Contact</a>
             </div>
             <div class="social">
                 <a href="https://instagram.com/kish.kalakriti"><i class="fab fa-instagram"></i></a>
@@ -26,3 +27,62 @@
             </div>
         </nav>
     </header>
+
+    <div class="mobile-category-dropdown">
+        <button class="category-dropdown-btn">Categories <i class="fas fa-chevron-down"></i></button>
+        <div class="dropdown-content">
+          <!-- Category links will be inserted here by JavaScript -->
+        </div>
+      </div>
+      
+
+    <div class="categories">
+        <div class="category">
+            <a href="#home-decor" class="category-link active" data-category="home-decor">Home Decor</a>
+            <a href="#customized-chocolates" class="category-link" data-category="customized-chocolates">Customized Chocolates</a>
+            <a href="#jewelry" class="category-link" data-category="jewelry">Jewelry</a>
+            <a href="#keychains" class="category-link" data-category="keychains">Keychains</a>
+            <a href="#handmade-gifts" class="category-link" data-category="handmade-gifts">Handmade Gifts</a>
+            <a href="#mobile-covers" class="category-link" data-category="mobile-covers">Mobile Covers</a>
+        </div>
+    </div>
+
+    <!-- Product sections -->
+    <div id="product-container">
+        <!-- Categories and products will be loaded dynamically -->
+    </div>
+
+    <!--<div class="backtotop">
+        <button><a href="#top">Back to Top</a></button>
+    </div>-->
+
+    <footer>
+        <div class="foot">
+            <div class="col">
+                <div class="foot-logo"></div>
+            </div>
+    
+            <div class="footer-links">
+                <div class="links">
+                    <a href="shop.html">Shop</a>
+                    <a href="https://wa.me/+917827044075?text=Hello%2C%20I%20would%20like%20a%20custom%20order">Custom Orders</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="shipping.html">Shipping & Returns</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Kish Kalakriti. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/shop.js"></script>
+</body>
+</html>
+
+    
