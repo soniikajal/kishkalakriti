@@ -51,6 +51,20 @@ document.addEventListener('DOMContentLoaded', function() {
     Object.keys(products).forEach(category => {
         currentPage[category] = 0;
     });
+    
+    // Check for hash in URL and set current category accordingly
+    const hash = window.location.hash.substring(1); // Remove the # character
+    if (hash && products[hash]) {
+        currentCategory = hash;
+        
+        // Update active class on category links
+        categoryLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.dataset.category === currentCategory) {
+                link.classList.add('active');
+            }
+        });
+    }
 
     // Function to create product HTML with WhatsApp integration
     function createProductHTML(product) {
@@ -108,10 +122,12 @@ document.addEventListener('DOMContentLoaded', function() {
         // Only render the current category
         const categoryProducts = products[currentCategory];
         html += `
-            <h2 class="mobile-category-title">${formatCategoryName(currentCategory)}</h2>
-            <div class="products">
-                ${categoryProducts.map(product => createProductHTML(product)).join('')}
-            </div>
+            <section id="${currentCategory}" class="shop-section mobile-view">
+                <h2 class="mobile-category-title">${formatCategoryName(currentCategory)}</h2>
+                <div class="products">
+                    ${categoryProducts.map(product => createProductHTML(product)).join('')}
+                </div>
+            </section>
         `;
         
         html += `</div>`;
@@ -212,6 +228,13 @@ document.addEventListener('DOMContentLoaded', function() {
             // Update current category for mobile view
             currentCategory = this.dataset.category;
             
+            // Update URL hash without scrolling
+            if (history.pushState) {
+                history.pushState(null, null, `#${currentCategory}`);
+            } else {
+                location.hash = currentCategory;
+            }
+            
             // Render products
             renderProducts();
             
@@ -228,6 +251,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile category dropdown functionality
     const dropdownBtn = document.querySelector('.category-dropdown-btn');
     const dropdownContent = document.querySelector('.dropdown-content');
+    
+    // Set initial dropdown button text based on current category
+    if (dropdownBtn) {
+        dropdownBtn.innerHTML = `${formatCategoryName(currentCategory)} <i class="fas fa-chevron-down"></i>`;
+    }
     
     // Clone category links into dropdown
     const categoryLinksContainer = document.querySelector('.category');
@@ -248,6 +276,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Update current category
                 currentCategory = category;
+                
+                // Update URL hash without scrolling
+                if (history.pushState) {
+                    history.pushState(null, null, `#${currentCategory}`);
+                } else {
+                    location.hash = currentCategory;
+                }
                 
                 // Hide dropdown after selection
                 dropdownContent.classList.remove('show');
@@ -275,14 +310,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Initial render
-    renderProducts();
+    // Scroll to hash on initial load if on mobile
+    if (hash && products[hash] && window.innerWidth <= 768) {
+        setTimeout(function() {
+            const mobileSection = document.querySelector(`.mobile-view #${hash}`);
+            if (mobileSection) {
+                mobileSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 100);
+    }
 
     // Handle window resize
     window.addEventListener('resize', function() {
         renderProducts();
     });
 });
-
-
-
