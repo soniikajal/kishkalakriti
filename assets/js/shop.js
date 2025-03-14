@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             { name: 'Shiv Parvati Glass Painting', image: '/assets/images/products/home-decor/product5.jpg' }
         ],
         'customized-chocolates': [
-            { name: 'Chocolate Bouquet', image: '/assets/images/products/chocolates/product1.heic' },
+            { name: 'Chocolate Bouquet', image: '/assets/images/products/chocolates/product1.png' },
             { name: 'Anniversary Chocolates', image: '/assets/images/products/chocolates/product2.jpg' },
             { name: 'Custom Message Chocolates', image: '/assets/images/products/chocolates/product3.jpg' },
             { name: 'Photo Printed Chocolates', image: '/assets/images/products/chocolates/product4.jpg' },
