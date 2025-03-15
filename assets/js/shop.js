@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
             { name: 'Shiva Charcoal Sketch', image: '/assets/images/products/home-decor/product2.png' },
             { name: 'Zenitsu Glass Painting', image: '/assets/images/products/home-decor/product3.png' },
             { name: 'Krishna Glass Painting', image: '/assets/images/products/home-decor/product4.jpg' },
-            { name: 'Shiv Parvati Glass Painting', image: '/assets/images/products/home-decor/product5.jpg' }
+            { name: 'Shiv Parvati Glass Painting', image: '/assets/images/products/home-decor/product5.jpg' },
+            { name: 'Custom Glass Painting', image: '/assets/images/products/gifts/product4.png' }
         ],
         'customized-chocolates': [
             { name: 'Chocolate Bouquet', image: '/assets/images/products/chocolates/product1.png' },
@@ -37,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ],
         'mobile-covers': [
             { name: 'Custom Design Cover', image: '/assets/images/products/mobile-covers/product1.jpg' },
-            { name: 'Name Printed Cover', image: '/assets/images/products/mobile-covers/product2.jpg' }
+            { name: 'Custom Design Cover', image: '/assets/images/products/mobile-covers/product2.jpg' }
         ]
     };
 
