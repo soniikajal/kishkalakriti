@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
             { name: 'Custom Necklace', image: '/assets/images/products/jewelry/product8.jpg' }
         ],
         'keychains': [
-            { name: 'Custom Name Keychain', image: '/assets/images/products/keychains/product1.jpg' },
-            { name: 'Resin Art Keychain', image: '/assets/images/products/keychains/product2.jpg' }
+            { name: 'Resin Keychain', image: '/assets/images/products/keychains/product1.jpg' },
+            { name: 'Resin Keychain', image: '/assets/images/products/keychains/product2.jpg' }
         ],
         'handmade-gifts': [
             { name: 'Frame', image: '/assets/images/products/gifts/product1.jpg' },
