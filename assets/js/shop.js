@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
             { name: 'Zenitsu Glass Painting', image: '/assets/images/products/home-decor/product3.png' },
             { name: 'Krishna Glass Painting', image: '/assets/images/products/home-decor/product4.jpg' },
             { name: 'Shiv Parvati Glass Painting', image: '/assets/images/products/home-decor/product5.jpg' },
-            { name: 'Custom Glass Painting', image: '/assets/images/products/gifts/product4.png' }
+            { name: 'Custom Glass Painting', image: '/assets/images/products/gifts/product4.png' },
+            { name: 'Lord Ram Sketch', image: '/assets/images/products/home-decor/product6.heic' }
         ],
         'customized-chocolates': [
             { name: 'Chocolate Bouquet', image: '/assets/images/products/chocolates/product1.png' },
