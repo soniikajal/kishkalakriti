@@ -15,7 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
             { name: 'Anniversary Chocolates', image: '/assets/images/products/chocolates/product2.jpg' },
             { name: 'Custom Message Chocolates', image: '/assets/images/products/chocolates/product3.jpg' },
             { name: 'Photo Printed Chocolates', image: '/assets/images/products/chocolates/product4.jpg' },
-            { name: 'Valentine Special', image: '/assets/images/products/chocolates/product5.jpg' }
+            { name: 'Valentine Special', image: '/assets/images/products/chocolates/product5.jpg' },
+            { name: '18Delights', image: '/assets/images/products/chocolates/product6.heic' }
+
         ],
         'jewelry': [
             { name: 'Custom Necklace', image: '/assets/images/products/jewelry/product1.jpg' },
@@ -35,7 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
             { name: 'Frame', image: '/assets/images/products/gifts/product1.jpg' },
             { name: 'Vintage Letter', image: '/assets/images/products/gifts/product2.jpg' },
             { name: 'Mini Scrapbook', image: '/assets/images/products/gifts/product3.jpg' },
-            { name: 'Custom Glass Painting', image: '/assets/images/products/gifts/product4.png' }
+            { name: 'Custom Glass Painting', image: '/assets/images/products/gifts/product4.png' },
+            { name: 'Vintage scroll', image: '/assets/images/products/gifts/product5.heic' }
+
         ],
         'mobile-covers': [
             { name: 'Custom Design Cover', image: '/assets/images/products/mobile-covers/product1.jpg' },
