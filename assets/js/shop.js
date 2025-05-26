@@ -8,7 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
             { name: 'Krishna Glass Painting', image: '/assets/images/products/home-decor/product4.jpg' },
             { name: 'Shiv Parvati Glass Painting', image: '/assets/images/products/home-decor/product5.jpg' },
             { name: 'Custom Glass Painting', image: '/assets/images/products/gifts/product4.png' },
-            { name: 'Lord Ram Sketch', image: '/assets/images/products/home-decor/product6.heic' }
+            { name: 'Lord Ram Sketch', image: '/assets/images/products/home-decor/product6.heic' },
+            { name: 'Custom Glass Painting', image: '/assets/images/products/home-decor/product7.jpg' },
+            { name: 'Custom Glass Painting', image: '/assets/images/products/home-decor/product8.jpg' },
+            { name: 'Custom Glass Painting', image: '/assets/images/products/home-decor/product9.jpg' },
+            { name: 'Custom Glass Painting', image: '/assets/images/products/home-decor/product10.jpg' }
+
         ],
         'customized-chocolates': [
             { name: 'Chocolate Bouquet', image: '/assets/images/products/chocolates/product1.png' },
@@ -38,7 +43,11 @@ document.addEventListener('DOMContentLoaded', function() {
             { name: 'Vintage Letter', image: '/assets/images/products/gifts/product2.jpg' },
             { name: 'Mini Scrapbook', image: '/assets/images/products/gifts/product3.jpg' },
             { name: 'Custom Glass Painting', image: '/assets/images/products/gifts/product4.png' },
-            { name: 'Vintage scroll', image: '/assets/images/products/gifts/product5.heic' }
+            { name: 'Vintage scroll', image: '/assets/images/products/gifts/product5.heic' },
+            { name: 'Custom Glass Painting', image: '/assets/images/products/gifts/product6.jpg' },
+            { name: 'Custom Glass Painting', image: '/assets/images/products/gifts/product7.jpg' },
+            { name: 'Custom Glass Painting', image: '/assets/images/products/gifts/product8.jpg' },
+            { name: 'Custom Glass Painting', image: '/assets/images/products/gifts/product9.jpg' }
 
         ],
         'mobile-covers': [
